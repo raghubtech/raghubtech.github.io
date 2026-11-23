@@ -5,3 +5,33 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}.reveal.shown{opacity:1;transform:translateY(0)}
+
+/* === Immersive 3D research portfolio layer === */
+.hero{isolation:isolate;overflow:hidden;perspective:1100px}
+#hero3d{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.92}
+.hero-vignette{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 72% 44%,transparent 0%,rgba(8,9,13,.13) 30%,#08090d 77%),linear-gradient(90deg,#08090d 0%,rgba(8,9,13,.82) 38%,rgba(8,9,13,.1) 100%)}
+.hero-inner{position:relative;z-index:1}
+.hero-title{position:relative;transform-style:preserve-3d;text-shadow:0 16px 70px #0008}
+.hero-3d-tag{position:absolute;right:5.2%;top:26%;display:flex;align-items:center;gap:10px;font:9px "DM Mono",monospace;letter-spacing:1.5px;color:#a5a8b3;border:1px solid #34313a;background:#0b0c12a8;padding:12px 15px;backdrop-filter:blur(12px);transform:translateZ(45px)}
+.hero-3d-tag small{color:#666b79;font-size:8px;margin-left:12px}
+.orbit-dot{width:6px;height:6px;border-radius:50%;background:#ff604b;box-shadow:0 0 15px #ff604b;animation:orbitPulse 2s ease-in-out infinite}
+.project{transform-style:preserve-3d;will-change:transform;}
+.project::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(125deg,transparent 25%,#ff604b0c 45%,#b7aaff0d 58%,transparent 75%);transition:opacity .35s}
+.project:hover::after{opacity:1}
+.project-visual{transform-style:preserve-3d}
+.risk-rings{animation:floatDepth 7s ease-in-out infinite}
+.ring1{animation:ringSpin 19s linear infinite;border-style:dashed}
+.ring2{animation:ringSpin 13s linear infinite reverse}
+.feature-matrix span{transition:transform .35s,box-shadow .35s}
+.project:hover .feature-matrix span.hot{transform:translateZ(18px) scale(1.1);box-shadow:0 0 25px #ff5a4570}
+.cuda-grid i{animation:cellGlow 2.4s ease-in-out infinite;animation-delay:calc(var(--i,0)*80ms)}
+.statement{overflow:hidden;transform-style:preserve-3d}
+.statement::before{content:"";position:absolute;width:40vw;height:40vw;right:-10vw;top:10%;border:1px solid #ff5a4518;border-radius:50%;box-shadow:0 0 0 40px #ff5a4505,0 0 0 90px #ff5a4503;animation:ringSpin 50s linear infinite;pointer-events:none}
+.statement-text{position:relative;text-shadow:0 15px 50px #0005}
+.section{transform-style:preserve-3d}
+@keyframes orbitPulse{50%{opacity:.35;transform:scale(.65)}}
+@keyframes floatDepth{0%,100%{transform:translate(-50%,-50%) rotateX(0deg) rotateY(0deg)}50%{transform:translate(-50%,-54%) rotateX(8deg) rotateY(-8deg)}}
+@keyframes ringSpin{to{transform:rotate(360deg)}}
+@keyframes cellGlow{0%,100%{filter:brightness(.75)}50%{filter:brightness(1.65)}}
+@media(max-width:800px){.hero-3d-tag{top:auto;right:5%;bottom:29%;font-size:7px;padding:9px 10px}.hero-3d-tag small{display:none}#hero3d{opacity:.6}.hero-vignette{background:radial-gradient(ellipse at 75% 40%,transparent 0%,#08090d 72%),linear-gradient(90deg,#08090d 0%,#08090d66 100%)}}
+@media(prefers-reduced-motion:reduce){#hero3d{display:none}.hero-3d-tag{display:none}}

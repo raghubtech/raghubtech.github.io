@@ -1,21 +1,21 @@
-# Raghu's Dark Portfolio
+# Raghu — Immersive Student Researcher Portfolio
 
-A custom dark, cinematic portfolio inspired by the screen recording you shared: oversized type, charcoal panels, red accents, project visuals, glitch hover, marquee, and scroll reveal.
+A dark, cinematic portfolio for GitHub Pages, with a lightweight interactive Three.js hero scene, subtle scroll reveals, and desktop project-card tilt.
 
-## Run it
-- Open `index.html` in a browser, or open the folder in VS Code and use Live Server.
-- It is a static site. No build step or framework is required.
+## Deploy
+1. Extract the ZIP.
+2. Copy `index.html`, `style.css`, `script.js`, `scene.js`, and this README into the root of your GitHub Pages repository.
+3. Commit and push.
 
-## Publish with GitHub Pages
-1. Create a public repository named `raghubtech.github.io`.
-2. Upload `index.html`, `style.css`, and `script.js` to the repository root.
-3. Open Settings → Pages.
-4. Choose Deploy from a branch → `main` → `/ (root)`.
-5. Save and wait for GitHub Pages to publish.
+```bash
+git add .
+git commit -m "Add immersive 3D researcher portfolio"
+git push
+```
 
-## Customize before sharing
-- Replace each `https://github.com/raghubtech` project link with the specific project repository when ready.
-- Add real project screenshots or demo links if you have them.
-- Add a PDF resume and link it from the nav if you want a resume button.
-- Confirm every metric and project claim matches your actual work. Synthetic clinical data should be clearly labelled as synthetic.
-- The project graphics are CSS/SVG-style illustrative visuals, not actual model outputs.
+The 3D scene imports Three.js from jsDelivr at runtime, so the browser needs internet access. If WebGL or the CDN is unavailable, the typography and project content still display. Reduced-motion settings disable the 3D scene. The site is static and requires no build step.
+
+## Personalize
+- Update links in project cards to direct repository URLs when available.
+- Check contact details and academic information before publishing.
+- Visual graphs are explicitly illustrative and not experimental results.
