@@ -1,21 +1,39 @@
-# Raghu — Immersive Student Researcher Portfolio
+# Raghu Harsha Vardhan Orchu — Portfolio
 
-A dark, cinematic portfolio for GitHub Pages, with a lightweight interactive Three.js hero scene, subtle scroll reveals, and desktop project-card tilt.
+B.Tech Artificial Intelligence (Medical) Engineering student at Amrita Vishwa Vidyapeetham, Coimbatore.
 
-## Deploy
-1. Extract the ZIP.
-2. Copy `index.html`, `style.css`, `script.js`, `scene.js`, and this README into the root of your GitHub Pages repository.
-3. Commit and push.
+This repository contains the source for my personal portfolio. It includes projects and coursework in machine learning, biomedical data, feature selection, time-series analysis, and GPU computing.
 
-```bash
+**Website:** https://raghubtech.github.io  
+**GitHub:** https://github.com/raghubtech  
+**LinkedIn:** https://www.linkedin.com/in/raghuharshavardhan-orchu-00a94a313/
+
+## About this site
+
+I use this site to share the technical work I have done during my degree and the areas I am learning about. Some projects are prototypes or coursework; synthetic-data projects are labelled as such. The graphics on the project cards are visual illustrations, not experimental results.
+
+## Projects
+
+- **Multi-Organ Clinical Risk Intelligence:** An exploratory ML pipeline using clinical features, model comparisons, calibration, and feature explanations. It is a learning prototype, not a clinically validated tool.
+- **Sparse Clinical Classification:** Experiments with LASSO Logistic Regression and ADMM-based optimization.
+- **Synthetic Diabetic Nephropathy Dataset:** A 4,000-row synthetic dataset used to practice data preparation and feature engineering.
+- **CUDA and Parallel Computing:** CUDA vector addition and tiled matrix multiplication, with performance analysis and OpenMP coursework.
+- **Environmental Monitoring:** ESP32 sensor monitoring and time-series forecasting exploration.
+
+## Technologies
+
+Python, MATLAB, C/C++, CUDA, HTML, CSS, JavaScript, Three.js, Git, and GitHub Pages.
+
+## Run locally
+
+Open `index.html` in a browser. The 3D scene loads Three.js from a CDN, so an internet connection is needed for that effect. The rest of the page remains readable if WebGL is unavailable.
+
+## Publish updates
+
+After editing the site files:
+
+```powershell
 git add .
-git commit -m "Add immersive 3D researcher portfolio"
+git commit -m "Update portfolio"
 git push
 ```
-
-The 3D scene imports Three.js from jsDelivr at runtime, so the browser needs internet access. If WebGL or the CDN is unavailable, the typography and project content still display. Reduced-motion settings disable the 3D scene. The site is static and requires no build step.
-
-## Personalize
-- Update links in project cards to direct repository URLs when available.
-- Check contact details and academic information before publishing.
-- Visual graphs are explicitly illustrative and not experimental results.
